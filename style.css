@@ -70,30 +70,30 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .sum-card {
   background: var(--grab-card);
   border: 1px solid var(--grab-border);
   border-radius: 14px;
-  padding: 16px 10px;
+  padding: 14px 10px;
   text-align: center;
-  min-height: 80px;
+  min-height: 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .sum-num {
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 900;
   color: var(--grab-green);
   font-variant-numeric: tabular-nums;
 }
 .sum-num.yellow { color: var(--orange); }
 .sum-label {
-  font-size: 0.7em;
+  font-size: 0.68em;
   color: var(--muted);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* Fare input section */
@@ -101,7 +101,7 @@ body {
   background: var(--grab-card);
   border: 1px solid var(--grab-border);
   border-radius: 14px;
-  padding: 16px;
+  padding: 14px;
   margin-bottom: 14px;
 }
 .input-label {
@@ -117,9 +117,10 @@ body {
   align-items: center;
 }
 .currency {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: var(--muted);
   font-weight: bold;
+  min-width: 28px;
 }
 .fare-input {
   flex: 1;
@@ -127,13 +128,14 @@ body {
   border: 1px solid var(--grab-border);
   border-radius: 10px;
   color: var(--text);
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
-  padding: 12px 14px;
+  padding: 10px 12px;
   font-family: 'Courier New', monospace;
   outline: none;
   transition: border-color 0.2s;
-  min-height: 54px;
+  min-height: 48px;
+  max-height: 48px;
 }
 .fare-input:focus {
   border-color: var(--grab-green);
@@ -142,17 +144,17 @@ body {
 
 .add-btn {
   width: 100%;
-  padding: 16px;
-  margin-top: 10px;
+  padding: 12px;
+  margin-top: 8px;
   background: var(--grab-green);
   color: #fff;
   border: none;
-  border-radius: 12px;
-  font-size: 1.1em;
+  border-radius: 10px;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.15s;
-  min-height: 54px;
+  min-height: 48px;
   letter-spacing: 0.02em;
 }
 .add-btn:active { background: #00c4a7; transform: scale(0.98); }
@@ -162,22 +164,22 @@ body {
 .quick-row {
   display: flex;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 8px;
   flex-wrap: wrap;
 }
 .quick-btn {
   flex: 1;
   min-width: 60px;
-  padding: 10px 4px;
+  padding: 8px 4px;
   background: var(--grab-dark);
   border: 1px solid var(--grab-border);
   border-radius: 8px;
   color: var(--muted);
-  font-size: 0.9em;
+  font-size: 0.88em;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.1s;
-  min-height: 44px;
+  min-height: 40px;
 }
 .quick-btn:hover { border-color: var(--grab-green); color: var(--text); }
 .quick-btn:active { background: var(--grab-border); }
@@ -227,8 +229,8 @@ body {
   background: var(--grab-card);
   border: 1px solid var(--grab-border);
   border-radius: 10px;
-  padding: 12px 14px;
-  margin-bottom: 8px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
   animation: slideIn 0.2s ease;
 }
 @keyframes slideIn {
