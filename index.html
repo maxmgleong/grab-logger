@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#00A98F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Grab Trip Logger</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-logo">GRAB</div>
+  <div class="header-sub">Trip Logger</div>
+</div>
+
+<!-- Summary -->
+<div class="summary">
+  <div class="sum-card">
+    <div class="sum-num yellow" id="totalFare">0</div>
+    <div class="sum-label">Total (RM)</div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-num" id="tripCount">0</div>
+    <div class="sum-label">Trips</div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-num" id="avgFare">0</div>
+    <div class="sum-label">Avg (RM)</div>
+  </div>
+</div>
+
+<!-- Fare Input -->
+<div class="input-section">
+  <div class="input-label">Fare (RM)</div>
+  <div class="input-row">
+    <span class="currency">RM</span>
+    <input
+      type="number"
+      id="fareInput"
+      class="fare-input"
+      placeholder="0.00"
+      inputmode="decimal"
+      step="0.01"
+      min="0"
+      autocomplete="off"
+    >
+  </div>
+
+  <div class="quick-row">
+    <button class="quick-btn" onclick="setQuick('5.00')">5</button>
+    <button class="quick-btn" onclick="setQuick('8.00')">8</button>
+    <button class="quick-btn" onclick="setQuick('10.00')">10</button>
+    <button class="quick-btn" onclick="setQuick('12.00')">12</button>
+    <button class="quick-btn" onclick="setQuick('15.00')">15</button>
+    <button class="quick-btn" onclick="setQuick('20.00')">20</button>
+  </div>
+
+  <button class="add-btn" onclick="addTrip()">+ Add Trip</button>
+</div>
+
+<!-- Trip List -->
+<div class="trip-list-header">
+  <span class="trip-list-title">Trip History</span>
+  <button class="clear-all-btn" onclick="clearAll()">Clear All</button>
+</div>
+
+<ul class="trip-list" id="tripList">
+  <div class="empty-state">No trips yet.<br>Add your first fare above.</div>
+</ul>
+
+<!-- Install Banner -->
+<div class="install-banner" id="installBanner">
+  + Install App — tap here
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
